@@ -1,4 +1,8 @@
-import { Category, Product } from './types';
+import { 
+  Category, Product, User, Order, Expense, FinancialData, 
+  DailyChartPoint, SalesAnalytics, InventorySummary, AdminNotification, 
+  ActivityLog, AdminMetrics 
+} from './types';
 
 export const DEMO_CATEGORIES: Category[] = [
   { id: 1, name: 'Elektronikë & TV', slug: 'elektronike-tv', icon: 'Tv', description: 'Televizorë inteligjentë, sisteme audio, pajisje argëtuese', active_count: 3 },
@@ -43,7 +47,7 @@ export const DEMO_PRODUCTS: Product[] = [
     anti_snip_minutes: 2,
     anti_snip_extension: 3,
     anti_snip_count: 0,
-    views_count: 120,
+    views_count: 142,
     current_winner_id: 2,
     winner_name: 'Agron M.',
     total_bids: 18,
@@ -79,7 +83,7 @@ export const DEMO_PRODUCTS: Product[] = [
     anti_snip_minutes: 2,
     anti_snip_extension: 3,
     anti_snip_count: 0,
-    views_count: 120,
+    views_count: 98,
     current_winner_id: 3,
     winner_name: 'Blerina K.',
     total_bids: 24,
@@ -115,7 +119,7 @@ export const DEMO_PRODUCTS: Product[] = [
     anti_snip_minutes: 2,
     anti_snip_extension: 3,
     anti_snip_count: 0,
-    views_count: 120,
+    views_count: 85,
     current_winner_id: 4,
     winner_name: 'Dardan G.',
     total_bids: 15,
@@ -151,7 +155,7 @@ export const DEMO_PRODUCTS: Product[] = [
     anti_snip_minutes: 2,
     anti_snip_extension: 3,
     anti_snip_count: 0,
-    views_count: 120,
+    views_count: 62,
     current_winner_id: 2,
     winner_name: 'Agron M.',
     total_bids: 11,
@@ -187,7 +191,7 @@ export const DEMO_PRODUCTS: Product[] = [
     anti_snip_minutes: 2,
     anti_snip_extension: 3,
     anti_snip_count: 0,
-    views_count: 120,
+    views_count: 51,
     current_winner_id: 3,
     winner_name: 'Blerina K.',
     total_bids: 14,
@@ -223,7 +227,7 @@ export const DEMO_PRODUCTS: Product[] = [
     anti_snip_minutes: 2,
     anti_snip_extension: 3,
     anti_snip_count: 0,
-    views_count: 120,
+    views_count: 73,
     current_winner_id: 4,
     winner_name: 'Dardan G.',
     total_bids: 20,
@@ -259,7 +263,7 @@ export const DEMO_PRODUCTS: Product[] = [
     anti_snip_minutes: 2,
     anti_snip_extension: 3,
     anti_snip_count: 0,
-    views_count: 120,
+    views_count: 38,
     current_winner_id: 2,
     winner_name: 'Agron M.',
     total_bids: 16,
@@ -295,7 +299,7 @@ export const DEMO_PRODUCTS: Product[] = [
     anti_snip_minutes: 2,
     anti_snip_extension: 3,
     anti_snip_count: 0,
-    views_count: 120,
+    views_count: 22,
     current_winner_id: 3,
     winner_name: 'Blerina K.',
     total_bids: 19,
@@ -360,3 +364,195 @@ export function filterDemoAuctions(params: {
     }
   };
 }
+
+// User Profiles
+export const DEMO_ADMIN_USER: User = {
+  id: 1,
+  email: 'admin@ankandet.al',
+  full_name: 'Administratori Kryesor',
+  phone: '+38344111222',
+  role: 'admin',
+  city: 'Prishtinë',
+  address: 'Rruga Nënë Tereza 14',
+  status: 'active',
+  created_at: new Date(now - 30 * day).toISOString()
+};
+
+export const DEMO_BUYER_USER: User = {
+  id: 2,
+  email: 'agron.m@gmail.com',
+  full_name: 'Agron Morina',
+  phone: '+38349223344',
+  role: 'buyer',
+  city: 'Prishtinë',
+  address: 'Dardania, Blloku 4',
+  status: 'active',
+  created_at: new Date(now - 15 * day).toISOString()
+};
+
+export const DEMO_USERS: User[] = [
+  DEMO_ADMIN_USER,
+  DEMO_BUYER_USER,
+  { id: 3, email: 'blerina.k@gmail.com', full_name: 'Blerina Krasniqi', phone: '+38345334455', role: 'buyer', city: 'Prizren', address: 'Shadërvan Nr. 8', status: 'active', created_at: new Date(now - 10 * day).toISOString() },
+  { id: 4, email: 'dardan.g@gmail.com', full_name: 'Dardan Gashi', phone: '+38344556677', role: 'buyer', city: 'Pejë', address: 'Rruga Mbretëresha Teutë', status: 'active', created_at: new Date(now - 5 * day).toISOString() }
+];
+
+export const DEMO_ORDERS: Order[] = [
+  {
+    id: 1,
+    order_number: 'ORD-2026-001',
+    user_id: 2,
+    product_id: 1,
+    product_title: 'Apple iPhone 15 Pro Max 256GB',
+    product_sku: 'ANK-APL-15PM',
+    product_images: ['https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=800&auto=format&fit=crop&q=80'],
+    buyer_name: 'Agron Morina',
+    buyer_email: 'agron.m@gmail.com',
+    cost_price: 450,
+    final_price: 890,
+    shipping_fee: 3,
+    total_amount: 893,
+    payment_method: 'cash_on_delivery',
+    payment_status: 'paid',
+    order_status: 'delivered',
+    shipping_name: 'Agron Morina',
+    shipping_phone: '+38349223344',
+    shipping_city: 'Prishtinë',
+    shipping_address: 'Dardania, Blloku 4',
+    tracking_number: 'POSTA-KS-88219',
+    created_at: new Date(now - 2 * day).toISOString()
+  },
+  {
+    id: 2,
+    order_number: 'ORD-2026-002',
+    user_id: 3,
+    product_id: 2,
+    product_title: 'Sony PlayStation 5 Slim Edition',
+    product_sku: 'ANK-SNY-PS5S',
+    product_images: ['https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=800&auto=format&fit=crop&q=80'],
+    buyer_name: 'Blerina Krasniqi',
+    buyer_email: 'blerina.k@gmail.com',
+    cost_price: 240,
+    final_price: 410,
+    shipping_fee: 3,
+    total_amount: 413,
+    payment_method: 'card',
+    payment_status: 'paid',
+    order_status: 'shipped',
+    shipping_name: 'Blerina Krasniqi',
+    shipping_phone: '+38345334455',
+    shipping_city: 'Prizren',
+    shipping_address: 'Shadërvan Nr. 8',
+    tracking_number: 'POSTA-KS-99120',
+    created_at: new Date(now - day).toISOString()
+  }
+];
+
+export const DEMO_EXPENSES: Expense[] = [
+  { id: 1, category: 'dogana', title: 'Zhboganimi i Kontingjentit #1 të Pajisjeve', amount: 2450, expense_date: '2026-11-01', notes: 'Dogana e Kosovës', created_at: new Date(now - 15 * day).toISOString() },
+  { id: 2, category: 'transport', title: 'Transporti Ndërkombëtar me Kamion (Gjermani - Kosovë)', amount: 1800, expense_date: '2026-11-02', notes: 'Transporti i artikujve', created_at: new Date(now - 14 * day).toISOString() },
+  { id: 3, category: 'operim', title: 'Qiraja dhe Mirëmbajtja e Magazinës në Fushë Kosovë', amount: 850, expense_date: '2026-11-05', notes: 'Hapësira 450m2', created_at: new Date(now - 11 * day).toISOString() },
+  { id: 4, category: 'marketing', title: 'Fushata e Marketingut në Facebook & Instagram', amount: 450, expense_date: '2026-11-08', notes: 'Target Kosovë', created_at: new Date(now - 8 * day).toISOString() },
+  { id: 5, category: 'paketim', title: 'Kuti Kartoni dhe Material Mbrojtës', amount: 280, expense_date: '2026-11-10', notes: 'Paketim i sigurt', created_at: new Date(now - 6 * day).toISOString() }
+];
+
+export const DEMO_ADMIN_METRICS: AdminMetrics = {
+  totalAuctions: 8,
+  activeAuctions: 6,
+  soldAuctions: 2,
+  totalBids: 137,
+  totalUsers: 48,
+  totalOrders: 14,
+  pendingOrders: 2,
+  completedOrders: 12,
+  newCustomersToday: 5,
+  todaySales: { revenue: 1300, orders: 2 },
+  weekSales: { revenue: 5840, orders: 8 },
+  monthSales: { revenue: 18450, orders: 26 },
+  totalRevenue: 18450,
+  grossProfit: 7850,
+  netProfit: 2020,
+  unreadAlerts: 3
+};
+
+export const DEMO_FINANCIALS: FinancialData = {
+  initialInvestment: 31000,
+  exchangeRate: 100,
+  totalRevenue: 18450,
+  cogs: 10600,
+  grossProfit: 7850,
+  totalExpenses: 5830,
+  netProfit: 2020,
+  profitMarginPct: 10.95,
+  lockedCapitalWarehouse: 18500,
+  retailValueWarehouse: 29400,
+  unsoldProductsCount: 16,
+  breakEvenProgress: 59.5,
+  expensesByCategory: [
+    { category: 'dogana', total: 2450, count: 1 },
+    { category: 'transport', total: 1800, count: 1 },
+    { category: 'operim', total: 850, count: 1 },
+    { category: 'marketing', total: 450, count: 1 },
+    { category: 'paketim', total: 280, count: 1 }
+  ]
+};
+
+export const DEMO_DAILY_CHART: DailyChartPoint[] = [
+  { date: '10 Nën', published: 4, sold: 1, revenue: 499, profit: 259 },
+  { date: '11 Nën', published: 6, sold: 2, revenue: 1300, profit: 610 },
+  { date: '12 Nën', published: 3, sold: 1, revenue: 760, profit: 180 },
+  { date: '13 Nën', published: 5, sold: 3, revenue: 1850, profit: 890 },
+  { date: '14 Nën', published: 8, sold: 4, revenue: 2450, profit: 1120 },
+  { date: '15 Nën', published: 4, sold: 2, revenue: 1250, profit: 540 },
+  { date: '16 Nën', published: 5, sold: 3, revenue: 1780, profit: 790 }
+];
+
+export const DEMO_SALES_ANALYTICS: SalesAnalytics = {
+  topProducts: [
+    { id: 1, title: 'Apple iPhone 15 Pro Max 256GB', sku: 'ANK-APL-15PM', category_name: 'Telefonë & Smart', units_sold: 4, total_revenue: 3560, total_profit: 1760 },
+    { id: 2, title: 'Sony PlayStation 5 Slim 1TB', sku: 'ANK-SNY-PS5S', category_name: 'Elektronikë & TV', units_sold: 5, total_revenue: 2495, total_profit: 1295 },
+    { id: 3, title: 'MacBook Air 15" M2', sku: 'ANK-MAC-15M2', category_name: 'Laptopë & IT', units_sold: 2, total_revenue: 2100, total_profit: 940 }
+  ],
+  topCategories: [
+    { id: 2, name: 'Telefonë & Smart', total_products: 4, total_sales: 6, total_revenue: 5200, total_bids_placed: 45 },
+    { id: 1, name: 'Elektronikë & TV', total_products: 3, total_sales: 5, total_revenue: 3100, total_bids_placed: 38 },
+    { id: 3, name: 'Laptopë & IT', total_products: 2, total_sales: 3, total_revenue: 2850, total_bids_placed: 29 }
+  ],
+  averageOrderValue: 461.25,
+  totalSoldUnits: 14,
+  traffic: {
+    totalViews: 980,
+    totalBids: 137,
+    totalOrders: 14,
+    conversionRateViewsToSale: 1.43,
+    conversionRateBidsToSale: 10.22
+  },
+  deadStock: []
+};
+
+export const DEMO_INVENTORY: InventorySummary = {
+  totalProducts: 24,
+  publishedProducts: 8,
+  soldProducts: 4,
+  warehouseProducts: 12,
+  lockedCost: 18500,
+  retailValuation: 29400,
+  categoryStock: [
+    { id: 2, name: 'Telefonë & Smart', total_items: 8, active_items: 4, sold_items: 2, capital_locked: 5800 },
+    { id: 1, name: 'Elektronikë & TV', total_items: 6, active_items: 3, sold_items: 2, capital_locked: 4200 },
+    { id: 3, name: 'Laptopë & IT', total_items: 4, active_items: 2, sold_items: 0, capital_locked: 3900 },
+    { id: 4, name: 'Pajisje Shtëpiake', total_items: 6, active_items: 3, sold_items: 0, capital_locked: 4600 }
+  ]
+};
+
+export const DEMO_NOTIFICATIONS: AdminNotification[] = [
+  { id: 1, type: 'product_sold', title: 'Artikull i Shitur', message: 'Apple iPhone 15 Pro Max u shit me opsionin Bli Tani për 890 €', severity: 'success', is_read: 0, created_at: new Date(now - 30 * 60 * 1000).toISOString() },
+  { id: 2, type: 'auction_ended', title: 'Ankandi Përfundoi', message: 'Sony PS5 Slim përfundoi me çmimin fitues 410 €', severity: 'info', is_read: 0, created_at: new Date(now - 2 * hour).toISOString() },
+  { id: 3, type: 'high_views_no_bids', title: 'Shikueshmëri e Lartë', message: 'MacBook Air 15" ka arritur 85 shikime në 12 orë', severity: 'warning', is_read: 0, created_at: new Date(now - 5 * hour).toISOString() }
+];
+
+export const DEMO_LOGS: ActivityLog[] = [
+  { id: 1, action: 'BUY_NOW_EXECUTE', entity_type: 'orders', entity_id: 1, details: 'Blerje e menjëhershme: iPhone 15 Pro Max', ip_address: '192.168.1.1', user_name: 'Agron Morina', user_email: 'agron.m@gmail.com', created_at: new Date(now - 30 * 60 * 1000).toISOString() },
+  { id: 2, action: 'BID_PLACED', entity_type: 'auctions', entity_id: 2, details: 'Ofertë 410 € nga Blerina K.', ip_address: '192.168.1.2', user_name: 'Blerina Krasniqi', user_email: 'blerina.k@gmail.com', created_at: new Date(now - 2 * hour).toISOString() },
+  { id: 3, action: 'ADMIN_LOGIN', entity_type: 'auth', details: 'Kyçje në sistem nga paneli administrativ', ip_address: '127.0.0.1', user_name: 'Administratori Kryesor', user_email: 'admin@ankandet.al', created_at: new Date(now - 3 * hour).toISOString() }
+];
