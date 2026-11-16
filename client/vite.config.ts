@@ -2,9 +2,9 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
-// https://vite.dev/config/
+// Use the repository subpath on GitHub Pages and a relative base on Render/local hosting.
 export default defineConfig({
-  base: './',
+  base: process.env.GITHUB_PAGES === 'true' ? '/ankandet-platform/' : './',
   plugins: [react(), tailwindcss()],
   server: {
     port: 3000,
