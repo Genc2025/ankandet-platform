@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background-color: #f8fafc;
+    color: #0f172a;
+    -webkit-font-smoothing: antialiased;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+  #root {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom pulse animations & badge glow */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Continuous smooth broadcast-style ticker marquee */
+@keyframes ticker-marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-ticker {
+  display: inline-flex;
+  width: max-content;
+  animation: ticker-marquee 50s linear infinite;
+}
+
+.animate-ticker:hover {
+  animation-play-state: paused;
+}

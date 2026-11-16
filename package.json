@@ -1,0 +1,34 @@
+{
+  "name": "ankandet-platform",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "server/server.js",
+  "scripts": {
+    "dev:server": "node --watch server/server.js",
+    "dev:client": "cd client && pnpm dev",
+    "dev": "concurrently -n server,client -c blue,green \"pnpm run dev:server\" \"pnpm run dev:client\"",
+    "build": "cd client && pnpm build",
+    "start": "node server/server.js",
+    "seed": "node server/seed.js",
+    "test": "node server/tests/run-all.js"
+  },
+  "keywords": ["auction", "ankande", "kosovo", "ecommerce", "real-time"],
+  "author": "Antigravity",
+  "license": "MIT",
+  "description": "Platformë profesionale ankandesh online për Kosovë me oferta në kohë reale, proxy bidding, anti-sniping dhe import masiv",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "better-sqlite3": "^13.1.1",
+    "cors": "^2.8.6",
+    "csv-parser": "^3.2.1",
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "multer": "^2.5.0",
+    "ws": "^8.23.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.7"
+  }
+}
