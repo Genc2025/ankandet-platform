@@ -5,12 +5,12 @@ import {
 } from './types';
 
 export const DEMO_CATEGORIES: Category[] = [
-  { id: 1, name: 'Elektronikë & TV', slug: 'elektronike-tv', icon: 'Tv', description: 'Televizorë inteligjentë, sisteme audio, pajisje argëtuese', active_count: 3 },
-  { id: 2, name: 'Telefonë & Smart', slug: 'telefone-smart', icon: 'Smartphone', description: 'Smartphones, tabletë, orë inteligjente dhe aksesorë', active_count: 4 },
-  { id: 3, name: 'Laptopë & IT', slug: 'laptope-it', icon: 'Laptop', description: 'Laptopë gaming, pajisje zyre, monitorë', active_count: 2 },
-  { id: 4, name: 'Pajisje Shtëpiake', slug: 'pajisje-shtepiake', icon: 'Home', description: 'Kondicionerë, fritezë, lavatriçe, aparate kafeje', active_count: 3 },
-  { id: 5, name: 'Vegla Pune & Makineri', slug: 'vegla-pune-makineri', icon: 'Wrench', description: 'Trapanë, prerëse këndore, gjeneratorë', active_count: 2 },
-  { id: 6, name: 'Pjesë Automjetesh', slug: 'pjese-automjetesh', icon: 'Car', description: 'Fellne alumini, goma, fenerë LED, vajra', active_count: 2 },
+  { id: 1, name: 'Elektronikë & TV', slug: 'elektronike-tv', icon: 'Tv', description: 'Televizorë inteligjentë, sisteme audio, pajisje argëtuese', active_count: 4 },
+  { id: 2, name: 'Telefonë & Smart', slug: 'telefone-smart', icon: 'Smartphone', description: 'Smartphones, tabletë, orë inteligjente dhe aksesorë', active_count: 5 },
+  { id: 3, name: 'Laptopë & IT', slug: 'laptope-it', icon: 'Laptop', description: 'Laptopë gaming, pajisje zyre, monitorë', active_count: 3 },
+  { id: 4, name: 'Pajisje Shtëpiake', slug: 'pajisje-shtepiake', icon: 'Home', description: 'Kondicionerë, fritezë, lavatriçe, aparate kafeje', active_count: 4 },
+  { id: 5, name: 'Vegla Pune & Makineri', slug: 'vegla-pune-makineri', icon: 'Wrench', description: 'Trapanë, prerëse këndore, gjeneratorë', active_count: 3 },
+  { id: 6, name: 'Pjesë Automjetesh', slug: 'pjese-automjetesh', icon: 'Car', description: 'Fellne alumini, goma, fenerë LED, vajra', active_count: 3 },
   { id: 7, name: 'Orë & Aksesorë', slug: 'ore-aksesore', icon: 'Watch', description: 'Orë automatike zvicerane, syze dielli, kuleta', active_count: 2 },
 ];
 
@@ -19,6 +19,7 @@ const hour = 3600 * 1000;
 const day = 24 * hour;
 
 export const DEMO_PRODUCTS: Product[] = [
+  // 1
   {
     id: 1,
     title: 'Apple iPhone 15 Pro Max 256GB - Titanium Natyral',
@@ -55,6 +56,7 @@ export const DEMO_PRODUCTS: Product[] = [
     status: 'active',
     created_at: new Date(now - 2 * day).toISOString()
   },
+  // 2
   {
     id: 2,
     title: 'Sony PlayStation 5 Slim Edition 1TB + 2 Kontrollues DualSense',
@@ -91,6 +93,7 @@ export const DEMO_PRODUCTS: Product[] = [
     status: 'active',
     created_at: new Date(now - day).toISOString()
   },
+  // 3
   {
     id: 3,
     title: 'Apple MacBook Air 15" M2 (16GB RAM, 512GB SSD) - Midnight Blue',
@@ -127,6 +130,7 @@ export const DEMO_PRODUCTS: Product[] = [
     status: 'active',
     created_at: new Date(now - day).toISOString()
   },
+  // 4
   {
     id: 4,
     title: 'Set Profesional Trapan me Bateri Bosch Professional GSB 18V-55',
@@ -163,6 +167,7 @@ export const DEMO_PRODUCTS: Product[] = [
     status: 'active',
     created_at: new Date(now - 12 * hour).toISOString()
   },
+  // 5
   {
     id: 5,
     title: 'Kondicioner Inverter Midea Breezeless 12000 BTU A+++ me Wi-Fi',
@@ -199,6 +204,7 @@ export const DEMO_PRODUCTS: Product[] = [
     status: 'active',
     created_at: new Date(now - day).toISOString()
   },
+  // 6
   {
     id: 6,
     title: 'Set 4 Fellne Alumini Origjinale BMW M-Performance 19" (Styling 791M)',
@@ -235,6 +241,7 @@ export const DEMO_PRODUCTS: Product[] = [
     status: 'active',
     created_at: new Date(now - day).toISOString()
   },
+  // 7
   {
     id: 7,
     title: 'Orë Automatike Japoneze Seiko Prospex "Turtle" 200m Diver',
@@ -271,6 +278,7 @@ export const DEMO_PRODUCTS: Product[] = [
     status: 'active',
     created_at: new Date(now - 8 * hour).toISOString()
   },
+  // 8
   {
     id: 8,
     title: 'Fshesë Robot me Larje me Ujë Roborock S8 Pro Ultra',
@@ -306,6 +314,598 @@ export const DEMO_PRODUCTS: Product[] = [
     reserve_met: true,
     status: 'active',
     created_at: new Date(now - 14 * hour).toISOString()
+  },
+  // 9
+  {
+    id: 9,
+    title: 'Samsung Galaxy S24 Ultra 512GB - Titanium Gray (Snapdragon 8 Gen 3)',
+    slug: 'samsung-galaxy-s24-ultra-512gb-titanium-gray',
+    sku: 'ANK-SAM-S24U',
+    description: 'Flagship i Samsung me ekran të sheshtë Dynamic AMOLED 2X 120Hz, Galaxy AI të integruar, trup titani dhe lapsin S-Pen. Bateri 5000mAh me karikim ultra të shpejtë.',
+    category_id: 2,
+    category_name: 'Telefonë & Smart',
+    category_slug: 'telefone-smart',
+    condition_grade: 'A',
+    condition_details: 'Klasa A (Paketim i mbyllur origjinal). Garancion 1 vit nga qendra e autorizuar.',
+    images: [
+      'https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1580910051074-3eb694886505?w=800&auto=format&fit=crop&q=80'
+    ],
+    cost_price: 520.00,
+    starting_price: 180.00,
+    current_price: 740.00,
+    reserve_price: 700.00,
+    buy_now_price: 950.00,
+    min_bid_increment: 10,
+    min_next_bid: 750.00,
+    auction_start: new Date(now - 6 * hour).toISOString(),
+    auction_end: new Date(now + 2 * day + 6 * hour).toISOString(),
+    original_end_time: new Date(now + 2 * day + 6 * hour).toISOString(),
+    anti_snip_minutes: 2,
+    anti_snip_extension: 3,
+    anti_snip_count: 0,
+    views_count: 115,
+    current_winner_id: 4,
+    winner_name: 'Dardan G.',
+    total_bids: 21,
+    reserve_met: true,
+    status: 'active',
+    created_at: new Date(now - 6 * hour).toISOString()
+  },
+  // 10
+  {
+    id: 10,
+    title: 'Smart TV Samsung 65" Neo QLED 4K (QN90C) 144Hz me Gaming Hub',
+    slug: 'smart-tv-samsung-65-neo-qled-4k-qn90c',
+    sku: 'ANK-SAM-65QLED',
+    description: 'Televizor premium me Quantum Mini LED për kontrast të thellë, procesor Neural Quantum 4K dhe frekuencë freskimi 144Hz. Ideale për filma dhe konzola PS5 / Xbox.',
+    category_id: 1,
+    category_name: 'Elektronikë & TV',
+    category_slug: 'elektronike-tv',
+    condition_grade: 'A',
+    condition_details: 'Klasa A (Paketim i ri i hapur vetëm për testim paneli). Zero dead-pixel.',
+    images: [
+      'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1461151304267-38535e780c79?w=800&auto=format&fit=crop&q=80'
+    ],
+    cost_price: 430.00,
+    starting_price: 150.00,
+    current_price: 620.00,
+    reserve_price: 590.00,
+    buy_now_price: 820.00,
+    min_bid_increment: 15,
+    min_next_bid: 635.00,
+    auction_start: new Date(now - 18 * hour).toISOString(),
+    auction_end: new Date(now + 1 * day + 14 * hour).toISOString(),
+    original_end_time: new Date(now + 1 * day + 14 * hour).toISOString(),
+    anti_snip_minutes: 2,
+    anti_snip_extension: 3,
+    anti_snip_count: 0,
+    views_count: 88,
+    current_winner_id: 2,
+    winner_name: 'Agron M.',
+    total_bids: 13,
+    reserve_met: true,
+    status: 'active',
+    created_at: new Date(now - 18 * hour).toISOString()
+  },
+  // 11
+  {
+    id: 11,
+    title: 'Dron DJI Mini 4 Pro Fly More Combo (me Telekomandë DJI RC 2 me Ekran)',
+    slug: 'dron-dji-mini-4-pro-fly-more-combo',
+    sku: 'ANK-DJI-M4P',
+    description: 'Pesha nën 249g pa nevojë regjistrimi, sensorë shmangieje pengesash 360°, xhirim video vertikale 4K 60fps HDR për TikTok/Reels dhe transmetim video O4 deri në 20km.',
+    category_id: 1,
+    category_name: 'Elektronikë & TV',
+    category_slug: 'elektronike-tv',
+    condition_grade: 'A',
+    condition_details: 'Klasa A. Përfshin 3 bateri origjinale, çantë transporti, telekomandë me ekran dhe helika rezervë.',
+    images: [
+      'https://images.unsplash.com/photo-1527977966376-1c8408f9f108?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=800&auto=format&fit=crop&q=80'
+    ],
+    cost_price: 380.00,
+    starting_price: 130.00,
+    current_price: 540.00,
+    reserve_price: 510.00,
+    buy_now_price: 720.00,
+    min_bid_increment: 10,
+    min_next_bid: 550.00,
+    auction_start: new Date(now - 10 * hour).toISOString(),
+    auction_end: new Date(now + 2 * day + 2 * hour).toISOString(),
+    original_end_time: new Date(now + 2 * day + 2 * hour).toISOString(),
+    anti_snip_minutes: 2,
+    anti_snip_extension: 3,
+    anti_snip_count: 0,
+    views_count: 104,
+    current_winner_id: 3,
+    winner_name: 'Blerina K.',
+    total_bids: 17,
+    reserve_met: true,
+    status: 'active',
+    created_at: new Date(now - 10 * hour).toISOString()
+  },
+  // 12
+  {
+    id: 12,
+    title: 'Laptop Gaming ASUS ROG Zephyrus G14 (Ryzen 9, RTX 4060, 32GB RAM, 1TB)',
+    slug: 'laptop-gaming-asus-rog-zephyrus-g14',
+    sku: 'ANK-ASU-G14',
+    description: 'Përbindësh kompakt gaming me ekran 14" ROG Nebula OLED 120Hz 3K, kartë grafike NVIDIA RTX 4060 8GB dhe trup alumini të lehtë. Ideale për arkitekturë, render dhe lojëra.',
+    category_id: 3,
+    category_name: 'Laptopë & IT',
+    category_slug: 'laptope-it',
+    condition_grade: 'A',
+    condition_details: 'Klasa A (Paketim origjinal). Karikues 240W dhe kuti origjinale.',
+    images: [
+      'https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=800&auto=format&fit=crop&q=80'
+    ],
+    cost_price: 620.00,
+    starting_price: 220.00,
+    current_price: 890.00,
+    reserve_price: 850.00,
+    buy_now_price: 1190.00,
+    min_bid_increment: 20,
+    min_next_bid: 910.00,
+    auction_start: new Date(now - 20 * hour).toISOString(),
+    auction_end: new Date(now + 3 * day + 4 * hour).toISOString(),
+    original_end_time: new Date(now + 3 * day + 4 * hour).toISOString(),
+    anti_snip_minutes: 2,
+    anti_snip_extension: 3,
+    anti_snip_count: 0,
+    views_count: 132,
+    current_winner_id: 4,
+    winner_name: 'Dardan G.',
+    total_bids: 26,
+    reserve_met: true,
+    status: 'active',
+    created_at: new Date(now - 20 * hour).toISOString()
+  },
+  // 13
+  {
+    id: 13,
+    title: 'Apple Watch Ultra 2 49mm Titanium me Rrip Portokalli Ocean Band',
+    slug: 'apple-watch-ultra-2-49mm-titanium',
+    sku: 'ANK-APL-WULT2',
+    description: 'Ora më rezistente e Apple me trup titani të klasit aeronautik, ekran ultra të ndritshëm 3000 nits, GPS me frekuencë të dyfishtë dhe thellësi-matës për zhytje deri në 40m.',
+    category_id: 7,
+    category_name: 'Orë & Aksesorë',
+    category_slug: 'ore-aksesore',
+    condition_grade: 'A',
+    condition_details: 'Klasa A. Shëndeti i baterisë 100%, vjen me karikues magnetik të shpejtë të thurur me pëlhurë.',
+    images: [
+      'https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1510017803434-a899398421b3?w=800&auto=format&fit=crop&q=80'
+    ],
+    cost_price: 290.00,
+    starting_price: 110.00,
+    current_price: 470.00,
+    reserve_price: 450.00,
+    buy_now_price: 620.00,
+    min_bid_increment: 10,
+    min_next_bid: 480.00,
+    auction_start: new Date(now - 5 * hour).toISOString(),
+    auction_end: new Date(now + 1 * day + 20 * hour).toISOString(),
+    original_end_time: new Date(now + 1 * day + 20 * hour).toISOString(),
+    anti_snip_minutes: 2,
+    anti_snip_extension: 3,
+    anti_snip_count: 0,
+    views_count: 79,
+    current_winner_id: 2,
+    winner_name: 'Agron M.',
+    total_bids: 18,
+    reserve_met: true,
+    status: 'active',
+    created_at: new Date(now - 5 * hour).toISOString()
+  },
+  // 14
+  {
+    id: 14,
+    title: 'Prerëse Këndore me Bateri DeWalt DCG405N 18V XR Brushless 125mm',
+    slug: 'prerese-kendore-dewalt-dcg405n-18v-xr',
+    sku: 'ANK-DWT-18VFLX',
+    description: 'Flex profesional me motor pa furça (Brushless) 18V, fren elektronik që ndalon diskun në më pak se 2 sekonda dhe mbrojtje nga pluhurat me rrjetë çeliku të lëvizshme.',
+    category_id: 5,
+    category_name: 'Vegla Pune & Makineri',
+    category_slug: 'vegla-pune-makineri',
+    condition_grade: 'A',
+    condition_details: 'Klasa A (Paketim i ri). Vjen me dorezë anësore antivibrim dhe çelës ndërrimi disku.',
+    images: [
+      'https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1581092335397-9583fe92d232?w=800&auto=format&fit=crop&q=80'
+    ],
+    cost_price: 65.00,
+    starting_price: 25.00,
+    current_price: 115.00,
+    reserve_price: 100.00,
+    buy_now_price: 160.00,
+    min_bid_increment: 5,
+    min_next_bid: 120.00,
+    auction_start: new Date(now - 16 * hour).toISOString(),
+    auction_end: new Date(now + 2 * day + 8 * hour).toISOString(),
+    original_end_time: new Date(now + 2 * day + 8 * hour).toISOString(),
+    anti_snip_minutes: 2,
+    anti_snip_extension: 3,
+    anti_snip_count: 0,
+    views_count: 47,
+    current_winner_id: 3,
+    winner_name: 'Blerina K.',
+    total_bids: 12,
+    reserve_met: true,
+    status: 'active',
+    created_at: new Date(now - 16 * hour).toISOString()
+  },
+  // 15
+  {
+    id: 15,
+    title: 'Aparat Kafeje Automatik DeLonghi Magnifica S me Shkumues Qumështi',
+    slug: 'aparat-kafeje-delonghi-magnifica-s',
+    sku: 'ANK-DLN-MAGS',
+    description: 'Aparat automatik i kafesë me mulli çeliku me 13 nivele bluarjeje, sistem ngrohjeje Thermoblock për temperaturë ideale dhe tub avulli për kapuçino kremor.',
+    category_id: 4,
+    category_name: 'Pajisje Shtëpiake',
+    category_slug: 'pajisje-shtepiake',
+    condition_grade: 'A',
+    condition_details: 'Klasa A. Përdorur shumë pak në zyrë, kryer pastrimi i plotë nga gëlqerja me set DeLonghi.',
+    images: [
+      'https://images.unsplash.com/photo-1517668808822-9ebb02ae2a0e?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=800&auto=format&fit=crop&q=80'
+    ],
+    cost_price: 110.00,
+    starting_price: 45.00,
+    current_price: 195.00,
+    reserve_price: 180.00,
+    buy_now_price: 280.00,
+    min_bid_increment: 5,
+    min_next_bid: 200.00,
+    auction_start: new Date(now - 7 * hour).toISOString(),
+    auction_end: new Date(now + 1 * day + 8 * hour).toISOString(),
+    original_end_time: new Date(now + 1 * day + 8 * hour).toISOString(),
+    anti_snip_minutes: 2,
+    anti_snip_extension: 3,
+    anti_snip_count: 0,
+    views_count: 64,
+    current_winner_id: 4,
+    winner_name: 'Dardan G.',
+    total_bids: 15,
+    reserve_met: true,
+    status: 'active',
+    created_at: new Date(now - 7 * hour).toISOString()
+  },
+  // 16
+  {
+    id: 16,
+    title: 'Set Fenerësh Origjinalë HD Matrix LED për Audi A6 C8 (2019-2023)',
+    slug: 'set-feneresh-audi-a6-c8-matrix-led',
+    sku: 'ANK-AUD-A6C8M',
+    description: 'Fenerë origjinalë të plotë majtas dhe djathtas me module kontrolli dhe drita dinamike vrapuese sinjalizimi. Pa asnjë këmbë të thyer apo gërvishtje në xham.',
+    category_id: 6,
+    category_name: 'Pjesë Automjetesh',
+    category_slug: 'pjese-automjetesh',
+    condition_grade: 'A',
+    condition_details: 'Klasa A (Origjinal OEM Audi). Të gjitha llampat dhe LED-at janë testuar 100%.',
+    images: [
+      'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?w=800&auto=format&fit=crop&q=80'
+    ],
+    cost_price: 360.00,
+    starting_price: 150.00,
+    current_price: 680.00,
+    reserve_price: 650.00,
+    buy_now_price: 920.00,
+    min_bid_increment: 15,
+    min_next_bid: 695.00,
+    auction_start: new Date(now - 22 * hour).toISOString(),
+    auction_end: new Date(now + 2 * day + 16 * hour).toISOString(),
+    original_end_time: new Date(now + 2 * day + 16 * hour).toISOString(),
+    anti_snip_minutes: 2,
+    anti_snip_extension: 3,
+    anti_snip_count: 0,
+    views_count: 81,
+    current_winner_id: 2,
+    winner_name: 'Agron M.',
+    total_bids: 23,
+    reserve_met: true,
+    status: 'active',
+    created_at: new Date(now - 22 * hour).toISOString()
+  },
+  // 17
+  {
+    id: 17,
+    title: 'Apple iPad Pro 12.9" M2 128GB Wi-Fi Space Gray (Liquid Retina XDR)',
+    slug: 'apple-ipad-pro-12-9-m2-128gb',
+    sku: 'ANK-APL-IPD12',
+    description: 'Ekrani më i fuqishëm me Mini-LED Liquid Retina XDR me 1600 nits pik, procesor M2, mbështetje për Apple Pencil Hover dhe Face ID të shpejtë.',
+    category_id: 2,
+    category_name: 'Telefonë & Smart',
+    category_slug: 'telefone-smart',
+    condition_grade: 'A',
+    condition_details: 'Klasa A (Si i ri në kuti). Bateri 98%.',
+    images: [
+      'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1561154464-82e9adf32764?w=800&auto=format&fit=crop&q=80'
+    ],
+    cost_price: 320.00,
+    starting_price: 120.00,
+    current_price: 580.00,
+    reserve_price: 550.00,
+    buy_now_price: 790.00,
+    min_bid_increment: 10,
+    min_next_bid: 590.00,
+    auction_start: new Date(now - 15 * hour).toISOString(),
+    auction_end: new Date(now + 1 * day + 6 * hour).toISOString(),
+    original_end_time: new Date(now + 1 * day + 6 * hour).toISOString(),
+    anti_snip_minutes: 2,
+    anti_snip_extension: 3,
+    anti_snip_count: 0,
+    views_count: 92,
+    current_winner_id: 3,
+    winner_name: 'Blerina K.',
+    total_bids: 17,
+    reserve_met: true,
+    status: 'active',
+    created_at: new Date(now - 15 * hour).toISOString()
+  },
+  // 18
+  {
+    id: 18,
+    title: 'Kufje me Anulim Zhurme Sony WH-1000XM5 Wireless Noise Cancelling',
+    slug: 'kufje-sony-wh-1000xm5-wireless',
+    sku: 'ANK-SNY-XM5',
+    description: 'Mbreti i anulimit të zhurmës me 8 mikrofona, procesor të integruar V1 dhe QN1, mbështetje Hi-Res Audio Wireless LDAC dhe jetëgjatësi baterie deri në 30 orë.',
+    category_id: 1,
+    category_name: 'Elektronikë & TV',
+    category_slug: 'elektronike-tv',
+    condition_grade: 'A',
+    condition_details: 'Klasa A. Valixhe origjinale, kabllo audio 3.5mm dhe kabllo karikimi.',
+    images: [
+      'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1484704849700-f032a568e944?w=800&auto=format&fit=crop&q=80'
+    ],
+    cost_price: 95.00,
+    starting_price: 40.00,
+    current_price: 185.00,
+    reserve_price: 170.00,
+    buy_now_price: 260.00,
+    min_bid_increment: 5,
+    min_next_bid: 190.00,
+    auction_start: new Date(now - 9 * hour).toISOString(),
+    auction_end: new Date(now + 18 * hour).toISOString(),
+    original_end_time: new Date(now + 18 * hour).toISOString(),
+    anti_snip_minutes: 2,
+    anti_snip_extension: 3,
+    anti_snip_count: 0,
+    views_count: 76,
+    current_winner_id: 4,
+    winner_name: 'Dardan G.',
+    total_bids: 14,
+    reserve_met: true,
+    status: 'active',
+    created_at: new Date(now - 9 * hour).toISOString()
+  },
+  // 19
+  {
+    id: 19,
+    title: 'Monitor Gaming i Lakuar Dell Alienware 34" QD-OLED 175Hz (AW3423DWF)',
+    slug: 'monitor-gaming-dell-alienware-34-qd-oled',
+    sku: 'ANK-DEL-AW34',
+    description: 'Teknologji Quantum Dot OLED me ngjyra të thella të pafundme, kohë përgjigjeje 0.1ms dhe rezolucion WQHD 3440x1440 me mbështetje AMD FreeSync Premium Pro.',
+    category_id: 3,
+    category_name: 'Laptopë & IT',
+    category_slug: 'laptope-it',
+    condition_grade: 'A',
+    condition_details: 'Klasa A (Si i ri në kuti). Asnjë shenjë përdorimi, zero burn-in.',
+    images: [
+      'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&auto=format&fit=crop&q=80'
+    ],
+    cost_price: 280.00,
+    starting_price: 100.00,
+    current_price: 520.00,
+    reserve_price: 490.00,
+    buy_now_price: 710.00,
+    min_bid_increment: 10,
+    min_next_bid: 530.00,
+    auction_start: new Date(now - 14 * hour).toISOString(),
+    auction_end: new Date(now + 2 * day + 12 * hour).toISOString(),
+    original_end_time: new Date(now + 2 * day + 12 * hour).toISOString(),
+    anti_snip_minutes: 2,
+    anti_snip_extension: 3,
+    anti_snip_count: 0,
+    views_count: 68,
+    current_winner_id: 2,
+    winner_name: 'Agron M.',
+    total_bids: 16,
+    reserve_met: true,
+    status: 'active',
+    created_at: new Date(now - 14 * hour).toISOString()
+  },
+  // 20
+  {
+    id: 20,
+    title: 'Gjenerator me Benzinë Inverter Honda EU22i 2.2kW Ultra i Qetë',
+    slug: 'gjenerator-inverter-honda-eu22i',
+    sku: 'ANK-HND-EU22',
+    description: 'Gjeneratori më i besueshëm japonez me rrymë të pastër sinusoidale të sigurt për kompjuterë e pajisje elektronike. Konsum minimal dhe zhurmë vetëm 48dB.',
+    category_id: 5,
+    category_name: 'Vegla Pune & Makineri',
+    category_slug: 'vegla-pune-makineri',
+    condition_grade: 'A',
+    condition_details: 'Klasa A (I papërdorur me vaj origjinal Honda).',
+    images: [
+      'https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&auto=format&fit=crop&q=80'
+    ],
+    cost_price: 350.00,
+    starting_price: 140.00,
+    current_price: 650.00,
+    reserve_price: 600.00,
+    buy_now_price: 890.00,
+    min_bid_increment: 15,
+    min_next_bid: 665.00,
+    auction_start: new Date(now - 11 * hour).toISOString(),
+    auction_end: new Date(now + 3 * day).toISOString(),
+    original_end_time: new Date(now + 3 * day).toISOString(),
+    anti_snip_minutes: 2,
+    anti_snip_extension: 3,
+    anti_snip_count: 0,
+    views_count: 53,
+    current_winner_id: 3,
+    winner_name: 'Blerina K.',
+    total_bids: 15,
+    reserve_met: true,
+    status: 'active',
+    created_at: new Date(now - 11 * hour).toISOString()
+  },
+  // 21
+  {
+    id: 21,
+    title: 'Fritezë me Ajër të Nxehtë Philips Airfryer XXL me Teknologji Fat Removal',
+    slug: 'friteze-me-ajer-philips-airfryer-xxl',
+    sku: 'ANK-PHL-XXL',
+    description: 'Kapacitet i madh 1.4kg / 7.2L për përgatitjen e vakteve familjare me 90% më pak yndyrë. 5 programe të paracaktuara gatimi me ekran dixhital me prekje.',
+    category_id: 4,
+    category_name: 'Pajisje Shtëpiake',
+    category_slug: 'pajisje-shtepiake',
+    condition_grade: 'A',
+    condition_details: 'Klasa A (Paketim i mbyllur me libër recetash).',
+    images: [
+      'https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=800&auto=format&fit=crop&q=80'
+    ],
+    cost_price: 60.00,
+    starting_price: 25.00,
+    current_price: 110.00,
+    reserve_price: 95.00,
+    buy_now_price: 165.00,
+    min_bid_increment: 5,
+    min_next_bid: 115.00,
+    auction_start: new Date(now - 8 * hour).toISOString(),
+    auction_end: new Date(now + 1 * day + 18 * hour).toISOString(),
+    original_end_time: new Date(now + 1 * day + 18 * hour).toISOString(),
+    anti_snip_minutes: 2,
+    anti_snip_extension: 3,
+    anti_snip_count: 0,
+    views_count: 42,
+    current_winner_id: 4,
+    winner_name: 'Dardan G.',
+    total_bids: 11,
+    reserve_met: true,
+    status: 'active',
+    created_at: new Date(now - 8 * hour).toISOString()
+  },
+  // 22
+  {
+    id: 22,
+    title: 'Timon Sportiv Origjinal me Butona Touch & Airbag për VW Golf 8 R-Line',
+    slug: 'timon-sportiv-vw-golf-8-r-line',
+    sku: 'ANK-VW-G8RL',
+    description: 'Timon origjinal me lëkurë të perforuar, qepje ngjyrë blu, butona haptikë touch dhe airbag origjinal të përfshirë. Përshtatet me Golf 8, Tiguan dhe Passat B8.',
+    category_id: 6,
+    category_name: 'Pjesë Automjetesh',
+    category_slug: 'pjese-automjetesh',
+    condition_grade: 'A',
+    condition_details: 'Klasa A (I hequr nga makina testuese me 4,000km). Gjendje perfekte.',
+    images: [
+      'https://images.unsplash.com/photo-1617814076367-b759c7d7e738?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=800&auto=format&fit=crop&q=80'
+    ],
+    cost_price: 160.00,
+    starting_price: 70.00,
+    current_price: 310.00,
+    reserve_price: 290.00,
+    buy_now_price: 440.00,
+    min_bid_increment: 10,
+    min_next_bid: 320.00,
+    auction_start: new Date(now - 17 * hour).toISOString(),
+    auction_end: new Date(now + 2 * day + 10 * hour).toISOString(),
+    original_end_time: new Date(now + 2 * day + 10 * hour).toISOString(),
+    anti_snip_minutes: 2,
+    anti_snip_extension: 3,
+    anti_snip_count: 0,
+    views_count: 61,
+    current_winner_id: 2,
+    winner_name: 'Agron M.',
+    total_bids: 14,
+    reserve_met: true,
+    status: 'active',
+    created_at: new Date(now - 17 * hour).toISOString()
+  },
+  // 23
+  {
+    id: 23,
+    title: 'Orë Zvicerane Tissot PRX Powermatic 80 Blue Dial (40mm)',
+    slug: 'ore-zvicerane-tissot-prx-powermatic-80',
+    sku: 'ANK-TIS-PRX80',
+    description: 'Ikona e dizajnit të viteve 70 me mekanizëm automatik Powermatic 80 që ofron 80 orë rezervë fuqie. Numërues blu me teksturë waffle dhe xham safiri rezistent ndaj gërvishtjeve.',
+    category_id: 7,
+    category_name: 'Orë & Aksesorë',
+    category_slug: 'ore-aksesore',
+    condition_grade: 'A',
+    condition_details: 'Klasa A (Vjen me kuti origjinale dhe kartë garancioni ndërkombëtare).',
+    images: [
+      'https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=800&auto=format&fit=crop&q=80'
+    ],
+    cost_price: 210.00,
+    starting_price: 90.00,
+    current_price: 390.00,
+    reserve_price: 370.00,
+    buy_now_price: 540.00,
+    min_bid_increment: 10,
+    min_next_bid: 400.00,
+    auction_start: new Date(now - 12 * hour).toISOString(),
+    auction_end: new Date(now + 2 * day + 15 * hour).toISOString(),
+    original_end_time: new Date(now + 2 * day + 15 * hour).toISOString(),
+    anti_snip_minutes: 2,
+    anti_snip_extension: 3,
+    anti_snip_count: 0,
+    views_count: 75,
+    current_winner_id: 3,
+    winner_name: 'Blerina K.',
+    total_bids: 18,
+    reserve_met: true,
+    status: 'active',
+    created_at: new Date(now - 12 * hour).toISOString()
+  },
+  // 24
+  {
+    id: 24,
+    title: 'Tablet Samsung Galaxy Tab S9 Ultra 256GB me Laps S-Pen & Tastierë',
+    slug: 'samsung-galaxy-tab-s9-ultra-256gb',
+    sku: 'ANK-SAM-TS9U',
+    description: 'Ekrani gjigant 14.6" Dynamic AMOLED 2X me 120Hz, rezistencë ndaj ujit dhe pluhurit IP68 dhe procesor Snapdragon 8 Gen 2 for Galaxy. Përfshin lapsin S-Pen me vonesë ultra të ulët.',
+    category_id: 2,
+    category_name: 'Telefonë & Smart',
+    category_slug: 'telefone-smart',
+    condition_grade: 'A',
+    condition_details: 'Klasa A. Përdorur vetëm për lexim dokumentesh, bateria 99%.',
+    images: [
+      'https://images.unsplash.com/photo-1585792180666-f75a7c518801?w=800&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=800&auto=format&fit=crop&q=80'
+    ],
+    cost_price: 290.00,
+    starting_price: 110.00,
+    current_price: 510.00,
+    reserve_price: 490.00,
+    buy_now_price: 690.00,
+    min_bid_increment: 10,
+    min_next_bid: 520.00,
+    auction_start: new Date(now - 19 * hour).toISOString(),
+    auction_end: new Date(now + 3 * day + 8 * hour).toISOString(),
+    original_end_time: new Date(now + 3 * day + 8 * hour).toISOString(),
+    anti_snip_minutes: 2,
+    anti_snip_extension: 3,
+    anti_snip_count: 0,
+    views_count: 83,
+    current_winner_id: 4,
+    winner_name: 'Dardan G.',
+    total_bids: 16,
+    reserve_met: true,
+    status: 'active',
+    created_at: new Date(now - 19 * hour).toISOString()
   }
 ];
 
@@ -348,7 +948,7 @@ export function filterDemoAuctions(params: {
   }
 
   const page = params.page || 1;
-  const limit = params.limit || 12;
+  const limit = params.limit || 24;
   const total = list.length;
   const totalPages = Math.ceil(total / limit) || 1;
   const offset = (page - 1) * limit;
@@ -457,37 +1057,37 @@ export const DEMO_EXPENSES: Expense[] = [
 ];
 
 export const DEMO_ADMIN_METRICS: AdminMetrics = {
-  totalAuctions: 8,
-  activeAuctions: 6,
-  soldAuctions: 2,
-  totalBids: 137,
-  totalUsers: 48,
-  totalOrders: 14,
-  pendingOrders: 2,
-  completedOrders: 12,
-  newCustomersToday: 5,
-  todaySales: { revenue: 1300, orders: 2 },
-  weekSales: { revenue: 5840, orders: 8 },
-  monthSales: { revenue: 18450, orders: 26 },
-  totalRevenue: 18450,
-  grossProfit: 7850,
-  netProfit: 2020,
+  totalAuctions: 24,
+  activeAuctions: 24,
+  soldAuctions: 6,
+  totalBids: 385,
+  totalUsers: 92,
+  totalOrders: 32,
+  pendingOrders: 4,
+  completedOrders: 28,
+  newCustomersToday: 8,
+  todaySales: { revenue: 2150, orders: 4 },
+  weekSales: { revenue: 11420, orders: 18 },
+  monthSales: { revenue: 34850, orders: 58 },
+  totalRevenue: 34850,
+  grossProfit: 14820,
+  netProfit: 8990,
   unreadAlerts: 3
 };
 
 export const DEMO_FINANCIALS: FinancialData = {
   initialInvestment: 31000,
   exchangeRate: 100,
-  totalRevenue: 18450,
-  cogs: 10600,
-  grossProfit: 7850,
+  totalRevenue: 34850,
+  cogs: 20030,
+  grossProfit: 14820,
   totalExpenses: 5830,
-  netProfit: 2020,
-  profitMarginPct: 10.95,
-  lockedCapitalWarehouse: 18500,
-  retailValueWarehouse: 29400,
-  unsoldProductsCount: 16,
-  breakEvenProgress: 59.5,
+  netProfit: 8990,
+  profitMarginPct: 25.79,
+  lockedCapitalWarehouse: 26800,
+  retailValueWarehouse: 44500,
+  unsoldProductsCount: 24,
+  breakEvenProgress: 88.5,
   expensesByCategory: [
     { category: 'dogana', total: 2450, count: 1 },
     { category: 'transport', total: 1800, count: 1 },
@@ -504,55 +1104,59 @@ export const DEMO_DAILY_CHART: DailyChartPoint[] = [
   { date: '13 Nën', published: 5, sold: 3, revenue: 1850, profit: 890 },
   { date: '14 Nën', published: 8, sold: 4, revenue: 2450, profit: 1120 },
   { date: '15 Nën', published: 4, sold: 2, revenue: 1250, profit: 540 },
-  { date: '16 Nën', published: 5, sold: 3, revenue: 1780, profit: 790 }
+  { date: '16 Nën', published: 6, sold: 5, revenue: 2980, profit: 1340 }
 ];
 
 export const DEMO_SALES_ANALYTICS: SalesAnalytics = {
   topProducts: [
-    { id: 1, title: 'Apple iPhone 15 Pro Max 256GB', sku: 'ANK-APL-15PM', category_name: 'Telefonë & Smart', units_sold: 4, total_revenue: 3560, total_profit: 1760 },
-    { id: 2, title: 'Sony PlayStation 5 Slim 1TB', sku: 'ANK-SNY-PS5S', category_name: 'Elektronikë & TV', units_sold: 5, total_revenue: 2495, total_profit: 1295 },
-    { id: 3, title: 'MacBook Air 15" M2', sku: 'ANK-MAC-15M2', category_name: 'Laptopë & IT', units_sold: 2, total_revenue: 2100, total_profit: 940 }
+    { id: 1, title: 'Apple iPhone 15 Pro Max 256GB', sku: 'ANK-APL-15PM', category_name: 'Telefonë & Smart', units_sold: 6, total_revenue: 5340, total_profit: 2640 },
+    { id: 12, title: 'ASUS ROG Zephyrus G14', sku: 'ANK-ASU-G14', category_name: 'Laptopë & IT', units_sold: 4, total_revenue: 4760, total_profit: 2280 },
+    { id: 2, title: 'Sony PlayStation 5 Slim 1TB', sku: 'ANK-SNY-PS5S', category_name: 'Elektronikë & TV', units_sold: 8, total_revenue: 3992, total_profit: 2072 }
   ],
   topCategories: [
-    { id: 2, name: 'Telefonë & Smart', total_products: 4, total_sales: 6, total_revenue: 5200, total_bids_placed: 45 },
-    { id: 1, name: 'Elektronikë & TV', total_products: 3, total_sales: 5, total_revenue: 3100, total_bids_placed: 38 },
-    { id: 3, name: 'Laptopë & IT', total_products: 2, total_sales: 3, total_revenue: 2850, total_bids_placed: 29 }
+    { id: 2, name: 'Telefonë & Smart', total_products: 5, total_sales: 12, total_revenue: 9800, total_bids_placed: 92 },
+    { id: 3, name: 'Laptopë & IT', total_products: 3, total_sales: 8, total_revenue: 7850, total_bids_placed: 68 },
+    { id: 1, name: 'Elektronikë & TV', total_products: 4, total_sales: 9, total_revenue: 6200, total_bids_placed: 74 },
+    { id: 5, name: 'Vegla Pune & Makineri', total_products: 3, total_sales: 5, total_revenue: 2950, total_bids_placed: 45 }
   ],
-  averageOrderValue: 461.25,
-  totalSoldUnits: 14,
+  averageOrderValue: 485.50,
+  totalSoldUnits: 34,
   traffic: {
-    totalViews: 980,
-    totalBids: 137,
-    totalOrders: 14,
-    conversionRateViewsToSale: 1.43,
-    conversionRateBidsToSale: 10.22
+    totalViews: 1940,
+    totalBids: 385,
+    totalOrders: 32,
+    conversionRateViewsToSale: 1.65,
+    conversionRateBidsToSale: 8.31
   },
   deadStock: []
 };
 
 export const DEMO_INVENTORY: InventorySummary = {
-  totalProducts: 24,
-  publishedProducts: 8,
-  soldProducts: 4,
-  warehouseProducts: 12,
-  lockedCost: 18500,
-  retailValuation: 29400,
+  totalProducts: 48,
+  publishedProducts: 24,
+  soldProducts: 10,
+  warehouseProducts: 24,
+  lockedCost: 26800,
+  retailValuation: 44500,
   categoryStock: [
-    { id: 2, name: 'Telefonë & Smart', total_items: 8, active_items: 4, sold_items: 2, capital_locked: 5800 },
-    { id: 1, name: 'Elektronikë & TV', total_items: 6, active_items: 3, sold_items: 2, capital_locked: 4200 },
-    { id: 3, name: 'Laptopë & IT', total_items: 4, active_items: 2, sold_items: 0, capital_locked: 3900 },
-    { id: 4, name: 'Pajisje Shtëpiake', total_items: 6, active_items: 3, sold_items: 0, capital_locked: 4600 }
+    { id: 2, name: 'Telefonë & Smart', total_items: 12, active_items: 5, sold_items: 4, capital_locked: 8900 },
+    { id: 1, name: 'Elektronikë & TV', total_items: 10, active_items: 4, sold_items: 3, capital_locked: 6400 },
+    { id: 3, name: 'Laptopë & IT', total_items: 8, active_items: 3, sold_items: 2, capital_locked: 5800 },
+    { id: 4, name: 'Pajisje Shtëpiake', total_items: 8, active_items: 4, sold_items: 1, capital_locked: 4200 },
+    { id: 5, name: 'Vegla Pune & Makineri', total_items: 6, active_items: 3, sold_items: 0, capital_locked: 3200 },
+    { id: 6, name: 'Pjesë Automjetesh', total_items: 4, active_items: 3, sold_items: 0, capital_locked: 2300 }
   ]
 };
 
 export const DEMO_NOTIFICATIONS: AdminNotification[] = [
-  { id: 1, type: 'product_sold', title: 'Artikull i Shitur', message: 'Apple iPhone 15 Pro Max u shit me opsionin Bli Tani për 890 €', severity: 'success', is_read: 0, created_at: new Date(now - 30 * 60 * 1000).toISOString() },
-  { id: 2, type: 'auction_ended', title: 'Ankandi Përfundoi', message: 'Sony PS5 Slim përfundoi me çmimin fitues 410 €', severity: 'info', is_read: 0, created_at: new Date(now - 2 * hour).toISOString() },
-  { id: 3, type: 'high_views_no_bids', title: 'Shikueshmëri e Lartë', message: 'MacBook Air 15" ka arritur 85 shikime në 12 orë', severity: 'warning', is_read: 0, created_at: new Date(now - 5 * hour).toISOString() }
+  { id: 1, type: 'product_sold', title: 'Artikull i Shitur', message: 'Apple iPhone 15 Pro Max u shit me opsionin Bli Tani për 890 €', severity: 'success', is_read: 0, created_at: new Date(now - 15 * 60 * 1000).toISOString() },
+  { id: 2, type: 'auction_ended', title: 'Ankandi Përfundoi', message: 'Sony PS5 Slim përfundoi me çmimin fitues 410 €', severity: 'info', is_read: 0, created_at: new Date(now - 1 * hour).toISOString() },
+  { id: 3, type: 'high_views_no_bids', title: 'Shikueshmëri e Lartë', message: 'ASUS ROG Zephyrus G14 ka arritur 132 shikime', severity: 'warning', is_read: 0, created_at: new Date(now - 3 * hour).toISOString() }
 ];
 
 export const DEMO_LOGS: ActivityLog[] = [
-  { id: 1, action: 'BUY_NOW_EXECUTE', entity_type: 'orders', entity_id: 1, details: 'Blerje e menjëhershme: iPhone 15 Pro Max', ip_address: '192.168.1.1', user_name: 'Agron Morina', user_email: 'agron.m@gmail.com', created_at: new Date(now - 30 * 60 * 1000).toISOString() },
-  { id: 2, action: 'BID_PLACED', entity_type: 'auctions', entity_id: 2, details: 'Ofertë 410 € nga Blerina K.', ip_address: '192.168.1.2', user_name: 'Blerina Krasniqi', user_email: 'blerina.k@gmail.com', created_at: new Date(now - 2 * hour).toISOString() },
-  { id: 3, action: 'ADMIN_LOGIN', entity_type: 'auth', details: 'Kyçje në sistem nga paneli administrativ', ip_address: '127.0.0.1', user_name: 'Administratori Kryesor', user_email: 'admin@ankandet.al', created_at: new Date(now - 3 * hour).toISOString() }
+  { id: 1, action: 'BUY_NOW_EXECUTE', entity_type: 'orders', entity_id: 1, details: 'Blerje e menjëhershme: iPhone 15 Pro Max', ip_address: '192.168.1.1', user_name: 'Agron Morina', user_email: 'agron.m@gmail.com', created_at: new Date(now - 15 * 60 * 1000).toISOString() },
+  { id: 2, action: 'BID_PLACED', entity_type: 'auctions', entity_id: 9, details: 'Ofertë 740 € nga Dardan G. për Samsung S24 Ultra', ip_address: '192.168.1.4', user_name: 'Dardan Gashi', user_email: 'dardan.g@gmail.com', created_at: new Date(now - 45 * 60 * 1000).toISOString() },
+  { id: 3, action: 'BID_PLACED', entity_type: 'auctions', entity_id: 12, details: 'Ofertë 890 € për ASUS ROG Zephyrus G14', ip_address: '192.168.1.3', user_name: 'Blerina Krasniqi', user_email: 'blerina.k@gmail.com', created_at: new Date(now - 2 * hour).toISOString() },
+  { id: 4, action: 'ADMIN_LOGIN', entity_type: 'auth', details: 'Kyçje në sistem nga paneli administrativ', ip_address: '127.0.0.1', user_name: 'Administratori Kryesor', user_email: 'admin@ankandet.al', created_at: new Date(now - 3 * hour).toISOString() }
 ];

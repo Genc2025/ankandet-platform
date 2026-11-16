@@ -41,7 +41,7 @@ export function App() {
   const [page, setPage] = useState<number>(1);
   const [totalPages, setTotalPages] = useState<number>(1);
   const [totalProducts, setTotalProducts] = useState<number>(0);
-  const pageSize = 48;
+  const pageSize = 24;
 
   // Global Inline Expansion State
   const [expandedProductId, setExpandedProductId] = useState<number | null>(null);
